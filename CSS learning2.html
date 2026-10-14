@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 500px;
+            height: 300px;
+            /* border-width: 5px;
+            border-style: dotted;
+            /* solid 实线边框 dashed 虚线边框 dotted 点线 */
+            /* border-color: red; */
+            border: 5px dotted red;
+            /* 复合写法 */
+            border-top: 5px solid rgb(169, 83, 215);
+            /* 可规定单行 */
+            background-color: pink;
+            padding: 20px;
+            /* 内边距 */
+            /* padding: 5px;
+            1个值，代表上下左右都有5像素内边距; padding: 5px 10px;
+            2个值，代表上下内边距是5像素 左右内边距是10像素; padding: 5px 10px 20px;
+            3个值，代表上内边距5像素 左右内边距10像素 下内边距20像素; padding: 5px 10px 20px 30px;
+            4个值， 上是5像素 右10像素 下20像素 左是30像素 顺时针 */
+            border-radius: 20px;
+            /* 圆角 */
+            /* border-radius: 8px;                  一个值：四个角全是 8px 
+border-radius: 8px 20px;              两个值：左上右下 8，右上左下 20 
+border-radius: 8px 20px 0;           三个值：左上 8，右上+左下 20，右下 0 
+border-radius: 8px 20px 0 40px;     四个值：左上→右上→右下→左下（顺时针） */
+
+        }
+
+        div:hover {
+            box-shadow: 30px 10px 5px gray;
+            /* 盒子阴影 */
+            /* h-shadow：必需。水平阴影的位置。允许负值。
+            v-shadow：必需。垂直阴影的位置。允许负值。
+            blur：可选。模糊距离。
+            spread：可选。阴影的尺寸。
+            color：可选。阴影的颜色。请参阅 CSS 颜色值。
+            inset：可选。将外部阴影 (outset) 改为内部阴影。 */
+        }
+
+        .one {
+            margin: 20px;
+            /* 外边距 */
+            /* margin: 5px;
+            1个值，代表上下左右都有5像素外边距; margin: 5px 10px;
+            2个值，代表上下外边距是5像素 左右外边距是10像素; margin: 5px 10px 20px;
+            3个值，代表上外边距5像素 左右外边距10像素 下外边距20像素; margin: 5px 10px 20px 30px;
+            4个值， 上是5像素 右10像素 下20像素 左是30像素 顺时针 */
+            /* auto(自动居中) */
+        }
+
+        .juzhong {
+            text-align: center;
+            /* left（默认），right（右对齐），justify（两端对齐） */
+            /* 本质是让h2盒子里面的文字文本居中对齐 */
+        }
+
+        #lu2 {
+            border-radius: 50%;
+            /* 圆角边框 */
+            padding: 50px 10px 50px 190px;
+        }
+
+        /* 浮动 */
+        /* float 属性用于创建浮动框，将其移动到一边，直到左边缘或右边缘触及包含块或另一个浮动框的边缘。 
+        语法： 选择器 { float: 属性值; } 
+        属性值说明： none：元素不浮动（默认值） left：元素向左浮动 right：元素向右浮动 */
+    </style>
+</head>
+
+<body>
+    <div class="one">1</div>
+    <div>2</div>
+    <div class="juzhong">
+        <span>wohaobuzilva,sheinneglaijiujiuwo,yanxuezhengfanle</span>
+        <br /><img src="小鹿.jpg" alt="" width="100px" id="lu1">
+        <br /><img src="小鹿.jpg" alt="" width="100px" id="lu2">
+    </div>
+</body>
+
+</html>

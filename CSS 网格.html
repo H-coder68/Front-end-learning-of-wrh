@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wanggelearning</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 100px);
+            grid-template-rows: repeat(5, 100px);
+            /* 
+            px：固定像素高度，如 100px 
+            • %：相对容器高度的百分比 
+            • fr：弹性比例单位，按份额分配剩余空间 
+            • auto：根据内容自动撑开 
+            • min-content / max-content：按最小 / 最大内容尺寸
+            • repeat()：重复定义，如 repeat(3, 100px)、repeat(2, 1fr)
+            • minmax()：设置范围，如 minmax(100px, 1fr)
+            • fit-content()：内容适应，如 fit-content(200px) */
+            grid-gap: 10px;
+            /* 先行后列，可统一规定 */
+            /* 网格线（单元格合并？）
+            grid-column-start, grid-column-end, grid-row-start 和 grid-row-end */
+
+            /* column-gap
+指定列之间的间隙
+gap
+row-gap 和 column-gap 的简写属性
+grid
+grid-template-rows, grid-template-columns, grid-template-areas, grid-auto-rows, grid-auto-columns, 以及 grid-auto-flow 的简写属性
+grid-area
+指定网格元素的名称，或者也可以是 grid-row-start, grid-column-start, grid-row-end, 和 grid-column-end的简写属性
+grid-auto-columns
+指的默认的列尺寸
+grid-auto-flow
+指定自动布局算法怎样运作，精确指定在网格中被自动布局的元素怎样排列。
+grid-auto-rows
+指的默认的行尺寸
+grid-column
+grid-column-start 和 grid-column-end 的简写属性
+grid-column-end
+指定网格元素列的结束位置
+grid-column-gap
+指定网格元素的间距大小
+grid-column-start
+指定网格元素列的开始位置
+grid-gap
+grid-row-gap 和 grid-column-gap 的简写属性
+grid-row
+grid-row-start 和 grid-row-end 的简写属性
+grid-row-end
+指定网格元素行的结束位置
+grid-row-gap
+指定网格元素的行间距
+grid-row-start
+指定网格元素行的开始位置
+grid-template
+grid-template-rows, grid-template-columns 和 grid-areas 的简写属性
+grid-template-areas
+指定如何显示行和列，使用命名的网格元素
+grid-template-columns
+指定列的大小，以及网格布局中设置列的数量
+grid-template-rows
+指定网格布局中行的大小
+row-gap
+指定两个行之间的间距 */
+        }
+
+        .grid-item {
+            text-align: center;
+            background-color: rgb(171, 231, 231)
+        }
+
+        img.grid-item {
+            width: 100%;
+            /* 宽度填满所在格子 */
+            height: 100%;
+            /* 高度填满所在格子 */
+            object-fit: contain;
+            /* 图片按原比例缩放，完整显示在格子内，不裁剪不变形 */
+            display: block;
+            /* 消除 img 底部默认的几像素空隙 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">10</div>
+        <div class="grid-item">11</div>
+        <div class="grid-item">12</div>
+        <img src="https://www.glimmer.org.cn/favicon.png" alt="小鹿" class="grid-item">
+        <div class="grid-item">14</div>
+        <div class="grid-item">15</div>
+        <div class="grid-item">16</div>
+        <div class="grid-item">17</div>
+        <div class="grid-item">18</div>
+        <div class="grid-item">19</div>
+        <div class="grid-item">20</div>
+        <div class="grid-item">21</div>
+        <div class="grid-item">22</div>
+        <div class="grid-item">23</div>
+        <div class="grid-item">24</div>
+        <div class="grid-item">25</div>
+    </div>
+</body>
+
+</html>
