@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        <!-- 函数 -->
+        <!-- 声明 -->
+        function sayHi() {
+            document.write('hello world!')
+            // 调用
+            sayHi()
+        }
+
+        // 函数传参（（）里是参数列表）
+        function sayHi(start, end) {
+            // 形参
+            document.write('hello world!')
+            let sum = 0
+            for (let i = start; i <= end; i++) { sum += i }
+        } sayHi(2, 50) </script>
+
+        <script>
+            // start=2end=50 实参 function sayHi(start=0, end=0) {
+            // 设置参数默认值（缺少实参时） document.write('hello world!') let sum=0 for (let i=start; i <=end; i++) { sum +=i } } sayHi()
+            // 返回值 // // 在函数体中使用 return 关键字能将内部的执行结果交给函数外部使用 // return 后面代码不会再被执行，会立即结束当前函数，所以 return 后面的数据不要换行写 //
+            //return函数可以没有 return，这种情况函数默认返回值为 undefined
+
+
+            // 遍历对象
+            let a = {
+                color1: 'red',
+                color2: 'yellow',
+                color3: 'blue'
+            }
+            for (let r in a) {
+                // console.log(r)
+                // 属性名
+                console.log(a[r])
+            }
+            // 内置对象
+
+
+
+            // // 原型链
+            // Parent.prototype.name = "所有Parent的实例都可以读取到我";
+
+            // let p1 = new Parent();
+            // let p2 = new Parent();
+
+            // p1.name // "所有Parent的实例都可以读取到我";
+            // p2.name // "所有Parent的实例都可以读取到我";
+
+            // p1.__proto__ === Parent.prototype; // true
+            // // new做一个连接，找p1的属性，找不到按链找
+
+            // 解构赋值
+            // 快速的从对象和数组中获取里面的成员
+            let arr = [1, 2, 3]
+            let [x, y, z] = arr
+            console.log(x, x)
+        </script>
+</body>
+
+</html>

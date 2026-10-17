@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 输出
+        document.write('要输出的内容')
+        alert('弹出提示框')
+        console.log('在控制台打印')
+
+        // 输入
+        let name = prompt('请输入你的名字')
+        document.write('你输入的名字是：' + name)
+
+        // 变量声明
+        let a = 10
+        console.log(a)
+        // 重新赋值
+        a = 20
+        console.log(a)
+        // 声明多个变量
+        let b = 30, c = 40
+        console.log(b, c)
+        // 交换变量
+        let d = 50, e = 60
+        let temp = d
+        d = e
+        e = temp
+        console.log(d, e)
+
+        // 数组声明
+        let arr = [1, 2, 3, 4, 5]
+        console.log(arr)
+        // 索引
+        console.log(arr[0])
+        // 长度
+        console.log(arr.length)
+
+        // 常量（永远不改变）(定义必须赋值)
+        const PI = 3.1415926
+        console.log(PI)
+
+        // NaN（运算错误）（粘性的）
+        let n = ("ren" - 2)
+        console.log(n)
+
+        // 字符串("" '' ``三者都可以包含)(字符相连+)
+        document.write('yes' + name + "真棒")
+        // 优化
+        document.write(`我叫${name}，这是我的名字`)
+
+        // 空对象 null
+        // 未定义 undefined
+
+        // 检测数据类型
+        console.log(typeof name)
+
+        // 类型转换
+        // 表单收取的默认数据类型是字符串
+        // 隐式转换
+        // +号两边只要有一个是字符串，都会把另外一个转成字符串
+        // 除了 + 以外的算术运算符 比如 - * / 等都会把数据转成数字类型
+        // +后面跟数字形式字符串可以转为数字型
+        // 显式转换
+        // 数字（有非数字输出NaN）(只识别第一个非数之前)
+
+        // 运算符
+        // num += 数字 -= *= /= %=
+        // ++ --
+        let nu = '123'
+        console.log(typeof Number(nu))
+        console.log(parseInt('12.34px'))
+        console.log(parseFloat('12.94px'))
+        // == 值是否相等  === 值和类型是否相等
+        // &&   ||   ！=
+
+        // 语句
+        // if语句
+        if (true) { console.log(name) }
+        // 0和空字符串是false
+        // 三元运算符
+        // 条件？真执行：否则
+        console.log(3 > 5 ? 3 : 5)
+        // switch语句
+        switch (num) {
+            case 1:
+                console.log(name)
+                break
+            default:
+                console.log(name)
+        }
+
+        // 断点调试
+        // while循环
+        while (条件) {
+            //  要重复执行的代码（循环体）
+        }
+
+        // for循环
+        for (let i = 1; 1 <= 3; i++) {
+            document.write('天降大馅饼')
+        }
+
+        // 数组
+        let shuzu = [1, 2, 3]
+        shuzu.push(4, 5, 6)
+        //  后面加
+        shuzu.unshift(4, 5, 6)
+        // 前面加
+        shuzu.pop()
+        // 删除最后一个元素
+        shuzu.shift()
+        // 删除第一个
+        // 指定删除
+        // shuzu.splice(起始位置（0开始），删除数量)
+        // shuzu.splice(1,1)
+
+
+        // set
+        // 数组 = 有序、可重复，按位置找东西 → Set = 自动去重、不排序，按“有没有”查东西，且查得快
+
+    </script>
+</body>
+
+</html>
