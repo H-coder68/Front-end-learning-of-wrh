@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>菡的blog初试</title>
+    <style>
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgb(109, 176, 137);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        a {
+            color: rgb(11, 65, 47)
+        }
+
+        .outside {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-rows: repeat(2, minmax(0, 1fr));
+            grid-gap: 5px;
+            padding: 5px;
+            text-align: center;
+            border: 3px solid rgb(42, 123, 20);
+            border-radius: 20px;
+        }
+
+        h1,
+        h2,
+        p {
+            font-family: "楷体";
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        nav {
+            text-align: center;
+            z-index: 10;
+            /* 数字大的在上，默认是0 */
+        }
+
+        #lbt {
+            position: relative;
+            width: 260px;
+            height: 360px;
+            margin: 0 auto;
+            border-radius: 15px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .imgs {
+            display: flex;
+            height: 100%;
+            transition: transform 0.4s;
+        }
+
+        .imgs img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        /* cover 铺满、contain 完整 */
+        #prev,
+        #next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            /* 定位父级50%位置 */
+            /* translate(x, y) 平移 translate(20px, 30px) 右移 20、下移 30  
+            translateX(x) / translateY(y) 单轴平移 translateY(-50%) 上移自身高度的一半  
+            scale(n) 缩放 scale(1.2) 放大到 1.2 倍  
+            rotate(deg) 旋转 rotate(45deg) 顺时针转 45 度  
+            skew(deg) 倾斜 skew(10deg) 歪斜  
+            none 取消变换 重置 */
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            font-size: 20px;
+            padding: 6px 12px;
+            cursor: pointer;
+            /* 鼠标移上来变小手 */
+            border-radius: 15px;
+        }
+
+        #prev {
+            left: 8px;
+        }
+
+        #next {
+            right: 8px;
+        }
+
+        body {
+            margin: 0;
+            background-color: rgb(198, 244, 222);
+        }
+
+        .inside {
+            display: grid;
+            place-content: center;
+            place-items: center;
+            gap: 8px;
+        }
+
+        .back {
+            background-image: url('bg.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        @media (max-width: 600px) {
+            .outside {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+        }
+
+        html {
+            scroll-padding-top: 90px;
+        }
+
+        /* 解决导航栏压标题问题（链接定位时） */
+        /* 滚动定位预留 */
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 id="top">欢迎来到菡的blog</h1>
+
+    </header>
+    <hr>
+    <nav>
+        <a href="#introduction">自我介绍</a>
+        <a href="#thoughts">为什么选择前端</a>
+        <a href="#log">一些日志</a>
+        <a href="#inf">联系方式</a>
+    </nav>
+    <main>
+        <section>
+            <hr>
+            <h2 id="introduction">自我介绍</h2>
+            <p>
+                哎呀，不是很想说简历上很正式的东西。随心说一点流水账吧。<br />
+                姓名：王若菡 性别：女 。班级：2026091601<br />
+                嗯，性格上属于很开朗了。纯正的E人。刚见面认识的时候给人的第一印象应该是不回避但也不会大说特说的类型的（朋友评价如是）。我是很喜欢广交好友的，在稍微熟悉一点后我是超级喜欢分享和聊天的人，开玩笑也是很放得开的。有一个奇怪的特性就是我越忙交流的欲望越强，清闲的时候反而没那么渴望说话。哈哈。<br />
+                关于习惯呢，我自认为是一个三分钟热度的人。一件事只有我能感受到或者预料到它是有进展的，有结果的时候我才有动力做下去。我感觉这个是个不好也好的事。一个是三分钟热度确实毅力不足吧，但其实它也无形中让我在一些白费功夫的事上减少了精力的浪费。难说。<br />
+                爱好上就是吃了吧。但是不能吃辣。热衷于不辣的美食。喜欢闲的没事就搓一顿奖励自己哈哈哈。在四川生活的有点艰难啊。间歇性的会有想要运动的冲动，虽然业余但是比较喜欢排球。
+            </p>
+        </section>
+        <hr>
+        <section>
+            <h2 id="thoughts">一些想法</h2>
+            <p>为什么选择微光呢。<br />
+                其实在暑假第一个看到的工作室介绍就是微光，但是那时候光顾着玩了也没准备。再一次是在北京校友会上听了武学姐的分享，特地问了学姐在哪个工作室。但那个时候也只是加深了印象，并没有坚定的或者开始行动的想法。最后是在军训期间了解了校区现在的所有工作室后做出的最终决定：微光的实力很强（没选上的话安慰自己更容易）然后同样重要的一点是截止日期比较晚（给我这种什么都不会的人更多时间准备）。最终在9.7开始了我的日常基础学习。
+            </p>
+            <p>为什么选择前端呢。<br />
+                花了一周半学习了日常基础，在四个里面我一开始先选的最感兴趣的机器学习。当时想的就是反正都不会，选哪个学都一样，现在觉得还是太天真了。于是又花了两个星期学python的基础语法。中秋和国庆应该是玩疯魔了，一个字也没学。回来之后在8号提交的机器学习第零题。好绝望吧。遂在9号听从学姐的建议果断前端走起。亚历山大啊！不过确实上手快呢，经过艰苦卓绝的学习后能做出来点实际的东西感觉很有成就感。
+            </p>
+        </section>
+        <hr>
+        <h2 id="log">写不下去了，随便摆点东西吧</h2>
+        <div class="outside">
+            <div id="lbt">
+                <div class="imgs">
+                    <img src="1.jpg" alt="">
+                    <img src="2.jpg" alt="">
+                    <img src="3.jpg" alt="">
+                    <img src="4.jpg" alt="">
+                </div>
+                <button id="prev">‹</button>
+                <button id="next">›</button>
+            </div>
+            <div class="inside">
+                <p id="greeting"></p>
+                <script>
+                    const hour = new Date().getHours();
+                    let greeting;
+
+                    if (hour < 12) {
+                        greeting = '早上好，现在是' + new Date();
+                    } else if (hour < 18) {
+                        greeting = '下午好，现在是' + new Date();
+                    } else {
+                        greeting = '晚上好，现在是' + new Date();
+                    }
+                    document.getElementById('greeting').textContent = greeting;
+                </script>
+                <!-- getElementById('x') id
+                 querySelector('.x') class   querySelector('p') 标签名  -->
+            </div>
+            <div class="inside">
+                <form>
+                    今天开心吗
+                    <input type="radio" id="like" name="like">
+                    <label for="like">开心</label>
+                    <input type="radio" id="verylike" name="like">
+                    <label for="verylike">低能量中...</label>
+                </form>
+            </div>
+            <div class="inside back">
+                <a href="#top">回到顶部</a>
+            </div>
+        </div>
+        <script>
+            const imgs = document.querySelector('.imgs');
+            const imgs2 = document.querySelectorAll('.imgs img');
+            let index = 0;
+
+            function goTo(i) {
+                if (i < 0) {
+                    i = imgs2.length - 1;
+                }
+                if (i > imgs2.length - 1) {
+                    i = 0;
+                }
+                index = i;
+                imgs.style.transform = 'translateX(-' + index * 100 + '%)';
+            }
+
+            document.getElementById('next').addEventListener('click', function () {
+                goTo(index + 1);
+            });
+
+            document.getElementById('prev').addEventListener('click', function () {
+                goTo(index - 1);
+            });
+
+        </script>
+    </main>
+    <hr>
+    <footer id="inf">我的微信：W-R-H-2008-w-r-h<br />
+        我的QQ：3678692793<br />
+        我的电话：18001169326
+    </footer>
+</body>
+
+</html>
